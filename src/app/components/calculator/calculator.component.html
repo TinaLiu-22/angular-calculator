@@ -1,0 +1,13 @@
+<div class="ui">
+    {{ expression }}
+</div>
+<div>
+    <app-button (click)="onClickNumber(num)" *ngFor="let num of numbers" [value]="num"></app-button>
+</div>
+<div>
+    <app-button (click)="onClickDecimal()" [value]="'.'"></app-button>
+    <app-button [disabled]="disableClearButton" (click)="onClickClear()" [value]="'C'"></app-button>
+    <app-button [disabled]="disableDeleteButton" (click)="onClickDelete()" [value]="'&#8592;'"></app-button>
+    <app-button (click)="onClickEquals()" [value]="'='"></app-button>
+    <app-button (click)="onClickOperator(op)" *ngFor="let op of operators" [value]="op"></app-button>
+</div>
